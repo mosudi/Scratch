@@ -1,12 +1,36 @@
 {% extends "base.html" %}
-{% block main_page %}
-    <h1>About Scratch</h1>
-    <p>
-        Scratch is a simple Python playground created to help beginners practice and understand the basics of Python programming.
-        <br><br>
-        Built with Flask, it offers a lightweight environment to run Python code snippets, explore examples, and learn by doing.
-    </p>
-{% endblock %}
-        
 
-        
+{% block title %}About - Scratch{% endblock %}
+
+{% block main_page %}
+<div class="text-center">
+    <h1 class="mb-4">About Scratch</h1>
+    <p class="lead">Welcome to <strong>Scratch</strong> — your starting point for learning Python programming from the basics!</p>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-6">
+        <h3>What is Scratch?</h3>
+        <p>
+            Scratch is a lightweight and beginner-friendly web application created to help students practice Python programming in a fun, simple, and safe environment.
+            You can write and run small Python code snippets, view examples, and gradually build your skills.
+        </p>
+    </div>
+    <div class="col-md-6">
+        <h3>Who is it for?</h3>
+        <p>
+            Scratch is designed for anyone new to Python — especially students who want a quick way to test and understand code concepts without installing anything complicated.
+            It’s perfect for classroom use, homework, and self-study!
+        </p>
+    </div>
+</div>
+
+<div class="text-center mt-5">
+    <p>Built with ❤️ using <strong>Python</strong> and <strong>Flask</strong>.</p>
+    
+    <!-- Start Learning Button -->
+    <a href="/examples" class="btn btn-success btn-lg mt-3">
+        Start Learning 🚀
+    </a>
+</div>
+{% endblock %}

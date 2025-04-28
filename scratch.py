@@ -31,7 +31,6 @@ def run_code():
             result = exec_globals.get('result', 'No result returned.')
         except Exception as e:
             error = traceback.format_exc()  # Capture detailed error info
-
     return render_template('run_code.html', result=result, error=error)
 
 
