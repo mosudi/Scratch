@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+
+{% block title %}Examples - Scratch{% endblock %}
+
+{% block main_page %}
+    <h1 class="mb-4">Python Examples</h1>
+    <p class="lead">Click on each section to explore different Python concepts:</p>
+
+    <div class="accordion container" id="examplesAccordion">
+
+        <!-- Basic Commands -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingBasics">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBasics" aria-expanded="true" aria-controls="collapseBasics">
+                    Basic Commands
+                </button>
+            </h2>
+            <div id="collapseBasics" class="accordion-collapse collapse show" aria-labelledby="headingBasics" data-bs-parent="#examplesAccordion">
+                <div class="accordion-body">
+                    <ul>
+                        <li><strong>Hello World:</strong> <code>print('Hello, World!')</code></li>
+                        <li><strong>Basic Addition:</strong> <code>result = 2 + 3</code></li>
+                        <li><strong>Boolean Logic:</strong> <code>True and False</code></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Control Structures -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingControl">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseControl" aria-expanded="false" aria-controls="collapseControl">
+                    Control Structures
+                </button>
+            </h2>
+            <div id="collapseControl" class="accordion-collapse collapse" aria-labelledby="headingControl" data-bs-parent="#examplesAccordion">
+                <div class="accordion-body">
+                    <ul>
+                        <li><strong>If Statement:</strong> <code>if 5 > 3: print('Five is greater')</code></li>
+                        <li><strong>While Loop:</strong> <code>i = 0; while i < 5: print(i); i += 1</code></li>
+                        <li><strong>For Loop:</strong> <code>for item in [1, 2, 3]: print(item)</code></li>
+                        <li><strong>Nested Loop:</strong> <code>for i in range(2): for j in range(2): print(i, j)</code></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Functions -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFunctions">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFunctions" aria-expanded="false" aria-controls="collapseFunctions">
+                    Functions
+                </button>
+            </h2>
+            <div id="collapseFunctions" class="accordion-collapse collapse" aria-labelledby="headingFunctions" data-bs-parent="#examplesAccordion">
+                <div class="accordion-body">
+                    <ul>
+                        <li><strong>Simple Function:</strong> <code>def greet(name): return f'Hello, {name}'</code></li>
+                        <li><strong>Lambda Function:</strong> <code>add = lambda a, b: a + b</code></li>
+                        <li><strong>Filter with Lambda:</strong> <code>filtered = list(filter(lambda x: x>0, [-1, 0, 1, 2]))</code></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data Structures -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingDataStructures">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDataStructures" aria-expanded="false" aria-controls="collapseDataStructures">
+                    Data Structures
+                </button>
+            </h2>
+            <div id="collapseDataStructures" class="accordion-collapse collapse" aria-labelledby="headingDataStructures" data-bs-parent="#examplesAccordion">
+                <div class="accordion-body">
+                    <ul>
+                        <li><strong>List:</strong> <code>my_list = [1, 2, 3]</code></li>
+                        <li><strong>List Methods:</strong> <code>my_list.append(4)</code></li>
+                        <li><strong>List Comprehension:</strong> <code>squares = [x*x for x in range(5)]</code></li>
+                        <li><strong>Tuple:</strong> <code>my_tuple = (1, 2, 3)</code></li>
+                        <li><strong>Set:</strong> <code>my_set = {1, 2, 3}</code></li>
+                        <li><strong>Dictionary:</strong> <code>student = {'name': 'Alice', 'age': 20}</code></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Files -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFiles">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFiles" aria-expanded="false" aria-controls="collapseFiles">
+                    Files
+                </button>
+            </h2>
+            <div id="collapseFiles" class="accordion-collapse collapse" aria-labelledby="headingFiles" data-bs-parent="#examplesAccordion">
+                <div class="accordion-body">
+                    <ul>
+                        <li><strong>Reading a File:</strong> <code>with open('file.txt', 'r') as f: print(f.read())</code></li>
+                        <li><strong>Writing to a File:</strong> <code>with open('file.txt', 'w') as f: f.write('Hello!')</code></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modules -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingModules">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseModules" aria-expanded="false" aria-controls="collapseModules">
+                    Modules
+                </button>
+            </h2>
+            <div id="collapseModules" class="accordion-collapse collapse" aria-labelledby="headingModules" data-bs-parent="#examplesAccordion">
+                <div class="accordion-body">
+                    <ul>
+                        <li><strong>Importing a Module:</strong> <code>import math; print(math.sqrt(16))</code></li>
+                        <li><strong>Random Number:</strong> <code>import random; print(random.randint(1, 10))</code></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Classes and Objects -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingClasses">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseClasses" aria-expanded="false" aria-controls="collapseClasses">
+                    Classes and Objects
+                </button>
+            </h2>
+            <div id="collapseClasses" class="accordion-collapse collapse" aria-labelledby="headingClasses" data-bs-parent="#examplesAccordion">
+                <div class="accordion-body">
+                    <ul>
+                        <li><strong>Basic Class:</strong> <code>class Dog: pass; my_dog = Dog()</code></li>
+                        <li><strong>Class with Method:</strong> <code>class Dog: def bark(self): print('Woof!')</code></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Other Useful Tips -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTips">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTips" aria-expanded="false" aria-controls="collapseTips">
+                    Other Useful Tips
+                </button>
+            </h2>
+            <div id="collapseTips" class="accordion-collapse collapse" aria-labelledby="headingTips" data-bs-parent="#examplesAccordion">
+                <div class="accordion-body">
+                    <ul>
+                        <li><strong>Try-Except Block:</strong> <code>try: print(10/0) except ZeroDivisionError: print('Cannot divide by zero')</code></li>
+                        <li><strong>Enumerate List:</strong> <code>for index, value in enumerate(['a', 'b']): print(index, value)</code></li>
+                        <li><strong>Zip Lists:</strong> <code>for a, b in zip([1,2], [3,4]): print(a,b)</code></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

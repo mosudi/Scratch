@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Run Python Code - Scratch{% endblock %}
+
+{% block main_page %}
+    <h1 class="mb-4">Run Python Code</h1>
+
+    <form method="POST" action="/run-code">
+        <div class="mb-3">
+            <label for="code" class="form-label">Enter Python Code</label>
+            <textarea id="code" name="code" class="form-control" rows="8" placeholder="Type your Python code here...">{{ request.form.code }}</textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Run Code</button>
+    </form>
+
+    {% if result %}
+        <div class="mt-4">
+            <h4>Result:</h4>
+            <pre>{{ result }}</pre>
+        </div>
+    {% elif error %}
+        <div class="mt-4">
+            <h4>Error:</h4>
+            <pre>{{ error }}</pre>
+        </div>
+    {% endif %}
+{% endblock %}
