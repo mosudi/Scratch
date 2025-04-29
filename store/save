@@ -1,0 +1,10 @@
+@app.route('/examples')
+@login_required
+def examples():
+    return render_template('examples.html')
+
+@app.route('/run-code', methods=['GET', 'POST'])
+@login_required
+def run_code():
+    # your existing logic
+    return render_template('run_code.html')
