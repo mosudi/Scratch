@@ -1,6 +1,6 @@
 import traceback
 from functools import wraps
-from flask import Flask,redirect,url_for,render_template,request,flash
+from flask import Flask,redirect,session,url_for,render_template,request,flash
 import config
 
 app=Flask(__name__)
@@ -62,7 +62,7 @@ def signin():
         user = users.get(username)
 
         if user and user['password'] == password:
-            session['user'] = username
+            session ['user'] = username
             flash(f'Welcome back, {username}!', 'success')
             return redirect('/')
         else:
@@ -71,7 +71,7 @@ def signin():
 
 @app.route('/logout')
 def logout():
-    session.pop('user', None)
+    session.pop =('user', None)
     flash('You have been logged out successfully.', 'info')
     return redirect('/')
 
@@ -83,6 +83,12 @@ def login_required(f):
             return redirect(url_for('signin'))  # Change to your actual sign-in route function name
         return f(*args, **kwargs)
     return decorated_function
+
+@app.route('/dashboard')
+def dashboard():
+    if 'user' not in session:
+        return redirect(url_for('signin'))
+    return render_template('dashboard.html', username=session['user'])
 
 
 if __name__ == '__main__':

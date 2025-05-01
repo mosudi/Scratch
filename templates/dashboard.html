@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Scratch{% endblock %}
+
+{% block main_page %}
+<div class="container mt-5">
+    <div class="text-center mb-5">
+        <h1 class="fw-bold">Welcome, {{ username }}!</h1>
+        <p class="lead">Your coding journey begins here. Choose an action to get started.</p>
+    </div>
+
+    <div class="row justify-content-center g-4">
+        <!-- Run Python Code -->
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="bi bi-terminal fs-1 text-primary"></i>
+                    </div>
+                    <h5 class="card-title">Run Python Code</h5>
+                    <p class="card-text">Write and test simple Python scripts directly in your browser.</p>
+                    <a href="{{ url_for('run_code') }}" class="btn btn-outline-primary w-100">Launch</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- View Examples -->
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="bi bi-book fs-1 text-success"></i>
+                    </div>
+                    <h5 class="card-title">Python Examples</h5>
+                    <p class="card-text">Browse categorized Python snippets and learn syntax step by step.</p>
+                    <a href="{{ url_for('examples') }}" class="btn btn-outline-success w-100">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- About -->
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="bi bi-info-circle fs-1 text-info"></i>
+                    </div>
+                    <h5 class="card-title">About Scratch</h5>
+                    <p class="card-text">Learn what Scratch is all about and how it helps you master Python.</p>
+                    <a href="{{ url_for('about') }}" class="btn btn-outline-info w-100">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sign Out -->
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="bi bi-box-arrow-right fs-1 text-danger"></i>
+                    </div>
+                    <h5 class="card-title">Sign Out</h5>
+                    <p class="card-text">You're done for now? Log out and come back anytime.</p>
+                    <a href="{{ url_for('signout') }}" class="btn btn-outline-danger w-100">Log Out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
